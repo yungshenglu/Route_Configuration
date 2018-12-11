@@ -1,4 +1,4 @@
-# SDN with Ryu
+# Route Configuration
 
 This repository is a lab for NCTU course "Introduction to Computer Networks 2018".
 
