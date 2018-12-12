@@ -17,8 +17,9 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
 ## Execution
 
 > TODO:
-> * Describe how to execute your program
-> * Show the screenshot of using iPerf command in Mininet
+> * How to run your program?
+> * What is the meaning of the executing command (both Mininet and Ryu controller)?
+> * Show the screenshot of using iPerf command in Mininet (both `SimpleController.py` and `controller.py`)
 
 ---
 ## Description
@@ -26,7 +27,7 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
 ### Tasks
 
 > TODO:
-> * Describe how you finish this work step-by-step in detail
+> * Describe how you finish this work in detail
 
 1. Environment Setup
 
@@ -41,14 +42,33 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
 ### Discussion
 
 > TODO:
-> * Compare the different between the iPerf result of `controller1.py` and `controller2.py` in detail
-> * Which forwarding rule is good? Why?
+> * Answer the following questions
+
+1. Describe the difference between packet-in and packet-out in detail.
+   
+2. What is “table-miss” in SDN?
+   
+3. Why is "`(app_manager.RyuApp)`" adding after the declaration of class in `controller.py`?
+   
+4. Explain the following code in `controller.py`.
+    ```python
+    @set_ev_cls(ofp_event.EventOFPPacketIn, CONFIG_DISPATCHER)
+    ```
+
+5. What is the meaning of “datapath” in `controller.py`?
+   
+6. Why need to set "`ip_proto=17`" in the flow entry?
+   
+7. Compare the differences between the iPerf results of `SimpleController.py` and `controller.py` in detail.
+   
+8. Which forwarding rule is better? Why?
 
 ---
 ## References
 
 > TODO: 
 > * Please add your references in the following
+
 * **Ryu SDN**
     * [Ryubook Documentation](https://osrg.github.io/ryu-book/en/html/)
     * [Ryubook [PDF]](https://osrg.github.io/ryu-book/en/Ryubook.pdf)
@@ -71,7 +91,7 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
 ## Contributors
 
 > TODO:
-> * Please replace "YOUR_NAME" and "YOUR_GITHUB_LINK" into yours
+> * Please replace "`YOUR_NAME`" and "`YOUR_GITHUB_LINK`" into yours
 
 * [YOUR_NAME](YOUR_GITHUB_LINK)
 * [David Lu](https://github.com/yungshenglu)
