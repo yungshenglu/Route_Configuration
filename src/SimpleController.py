@@ -119,7 +119,7 @@ class SimpleController1(app_manager.RyuApp):
 
         # Add forwarding rule in s3
         if msg.datapath.id == 3:
-            # For h1-h2 flow: s1 -> s3 -> h2
+            # For h2-h1 flow: h2 -> s3 -> s1
             match = parser.OFPMatch(
                 in_port=1,
                 eth_type=0x0800,
@@ -133,7 +133,7 @@ class SimpleController1(app_manager.RyuApp):
                 priority=3,
                 match=match,
                 actions=actions)
-            # For h2-h1 flow: h2 -> s3 -> s1
+            # For h1-h2 flow: s1 -> s3 -> h2
             match = parser.OFPMatch(
                 in_port=2,
                 eth_type=0x0800,
