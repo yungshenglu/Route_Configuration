@@ -14,60 +14,47 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
 2. Learn how to add forwarding rule into each OpenFlow switch
 
 ---
-## Execution
+## Overview
 
-> TODO:
-> * How to run your program?
-> * What is the meaning of the executing command (both Mininet and Ryu controller)?
-> * Show the screenshot of using iPerf command in Mininet (both `SimpleController.py` and `controller.py`)
+1. We will give you a Python code (`SimpleTopo.py`) that includes an example network topology and another Python code (`SimpleController.py`) that includes Ryu controller
+2. We will get you a figure illustrating a topology you should generate
+3. Copy the necessary function code from `SimpleTopo.py` and `SimpleController.py` to your Python code (`topo.py` and `controller.py`) to build your networks with forwarding rules
 
 ---
-## Description
+## Tasks
 
-### Tasks
-
-> TODO:
-> * Describe how you finish this work in detail
+> **NOTICE:** Please follow this [slides](Tasks.pdf) for detail.
 
 1. Environment Setup
-
 2. Example of Ryu SDN
-
 3. Mininet Topology
-
 4. Ryu Controller
-
 5. Measurement
+6. Report
 
-### Discussion
+### File Structure
 
-> TODO:
-> * Answer the following questions
-
-1. Describe the difference between packet-in and packet-out in detail.
-   
-2. What is “table-miss” in SDN?
-   
-3. Why is "`(app_manager.RyuApp)`" adding after the declaration of class in `controller.py`?
-   
-4. Explain the following code in `controller.py`.
-    ```python
-    @set_ev_cls(ofp_event.EventOFPPacketIn, CONFIG_DISPATCHER)
-    ```
-
-5. What is the meaning of “datapath” in `controller.py`?
-   
-6. Why need to set "`ip_proto=17`" in the flow entry?
-   
-7. Compare the differences between the iPerf results of `SimpleController.py` and `controller.py` in detail.
-   
-8. Which forwarding rule is better? Why?
+```bash
+Route_Configuration/            # This is ./ in this repository
+|--- src/                       # Folder of source code
+    |--- scripts/               # Folder of scripts
+        |--- run_mininet.sh     # Running script of Mininet
+        |--- run_ryu.sh         # Running script of Ryu manager
+    |--- topo/                  # Folder of topology figure
+        |--- topo.png
+    |--- out/                   # Output files
+        |--- .gitkeep           # For keeping this folder
+    |--- SimpleTopo.py          # Example code of topology
+    |--- SimpleController.py    # Example code of controller
+    |--- controller.py          # Your program should be here!
+    |--- topo.py                # Your program should be here!
+|--- LICENSE
+|--- README.md
+|--- .gitignore                 # For ignoring useless files
+```
 
 ---
 ## References
-
-> TODO: 
-> * Please add your references in the following
 
 * **Ryu SDN**
     * [Ryubook Documentation](https://osrg.github.io/ryu-book/en/html/)
@@ -88,15 +75,11 @@ In this lab, we are going to write a Python program with Ryu SDN framework to bu
     * [鳥哥的 Linux 私房菜 – 第九章、vim 程式編輯器](http://linux.vbird.org/linux_basic/0310vi.php)
 
 ---
-## Contributors
+## Contributor
 
-> TODO:
-> * Please replace "`YOUR_NAME`" and "`YOUR_GITHUB_LINK`" into yours
-
-* [YOUR_NAME](YOUR_GITHUB_LINK)
 * [David Lu](https://github.com/yungshenglu)
 
 ---
 ## License
 
-GNU GENERAL PUBLIC LICENSE Version 3
+[GNU GENERAL PUBLIC LICENSE Version 3](LICENSE)
